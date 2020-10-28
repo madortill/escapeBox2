@@ -1,0 +1,29 @@
+.pic img{
+    width: 140px;
+}
+td{
+    font-size: 20px;
+    text-align: center;
+}
+thead th{
+    font-size: 20px;
+    text-align: center;
+}
+.the_people{
+    width: 400px;
+    
+}
+
+.textSord{
+    position: absolute;
+    top: 0;
+    right:2%;
+    text-align: left;
+}
+h1{
+    text-align: center;
+}
+select{
+    position: absolute;
+    left:92%;
+}

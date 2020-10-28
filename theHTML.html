@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="newJS.js"></script>
+      
+    </head>
+<body dir="rtl" >
+   
+    <div  class="textSord">
+        <h1>חפש לפי:</h1>
+        <br><br>
+        <input type="search" id="name" placeholder="שם פרטי" onkeyup="searchName()">
+        <input type="search" id="last" placeholder="שם משפחה" onkeyup="searchLast()">
+        <input type="search" id="id" placeholder="מ.א" onkeyup="searchID()">
+        <input type="search" id="battalion" placeholder="מחזור" onkeyup="searchBattalion()">
+        <br>
+        <br>
+<!--
+        <select name="בחר" id="select" onke="select()">
+            <option value="everything">הכל</option>
+            <option value="female">נקבה</option>
+            <option value="male">זכר</option>
+            </select>    
+-->
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+    <div class="the_people">
+            <table class="table table-soldier" id="userdata" border="2" aligth="center">
+                <thead class="thead-dark">
+                    <th>תמונה</th>
+                    <th>שם פרטי</th>
+                    <th>שם משפחה</th>
+                    <th>מספר אישי</th>
+                    <th>מין</th>
+                    <th>גדוד</th>
+                    <th>מחזור</th>
+                    
+                </thead>
+                <tbody >
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_8914.JPG"></td>
+                        <td class="firstName">דניאל</td>
+                        <td class="lastName">רחימי</td>
+                        <td class="id">2178451</td>
+                        <td class="gender">זכר</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל'</td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_8915.JPG"></td>
+                        <td class="firstName">טל</td>
+                        <td class="lastName">דוידי</td>
+                        <td class="id">4875924</td>
+                        <td class="gender">זכר</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל"ג</td>
+                        
+                    </tr>
+                     <tr>
+                        <td class="pic"><img src="pics/TIL_8952.JPG"></td>
+                        <td class="firstName">נעמה</td>
+                        <td class="lastName">שמיר</td>
+                        <td class="id">7845554</td>
+                        <td class="gender">נקבה</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל"ב</td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_8917.JPG"></td>
+                        <td class="firstName">אמיר</td>
+                        <td class="lastName">חג'ג'</td>
+                        <td class="id">9587458</td>
+                        <td class="gender">זכר</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל"ב</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_8923.JPG"></td>
+                        <td class="firstName">תום</td>
+                        <td class="lastName">בורשטיין</td>
+                        <td class="id">3144579</td>
+                        <td class="gender">זכר</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל'</td>
+                        
+                    </tr> 
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_8928.JPG"></td>
+                        <td class="firstName">אהרון</td>
+                        <td class="lastName">אהרוני</td>
+                        <td class="id">1047854</td>
+                        <td class="gender">זכר</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">י"ב</td>
+                        
+                    </tr> 
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_8911.JPG"></td>
+                        <td class="firstName">לינוי</td>
+                        <td class="lastName">אבוטבול</td>
+                        <td class="id">3258559</td>
+                        <td class="gender">נקבה</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל"ג</td>
+                        
+                    </tr> 
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_8927.JPG"></td>
+                        <td class="firstName">יעקוב</td>
+                        <td class="lastName">לבוביץ</td>
+                        <td class="id">1452874</td>
+                        <td class="gender">זכר</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">כ"ו</td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_8912.JPG"></td>
+                        <td class="firstName">יוני</td>
+                        <td class="lastName">מוסרי</td>
+                        <td class="id">8354058</td>
+                        <td class="gender">זכר</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל"ב</td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_8931.JPG"></td>
+                        <td class="firstName">טל</td>
+                        <td class="lastName">דנונה</td>
+                        <td class="id">3147509</td>
+                        <td class="gender">נקבה</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל"א</td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_8957.JPG"></td>
+                        <td class="firstName">אפרת</td>
+                        <td class="lastName">דרוינוב</td>
+                        <td class="id">84755512</td>
+                        <td class="gender">נקבה</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל"א</td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_8936.JPG"></td>
+                        <td class="firstName">יותם</td>
+                        <td class="lastName">ברנס</td>
+                        <td class="id">3547100</td>
+                        <td class="gender">זכר</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל"ג</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_8941.JPG"></td>
+                        <td class="firstName">עומר</td>
+                        <td class="lastName">יבנון</td>
+                        <td class="id">8569271</td>
+                        <td class="gender">נקבה</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל"ב</td>
+                        
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_8943.JPG"></td>
+                        <td class="firstName">דנה</td>
+                        <td class="lastName">אמיר</td>
+                        <td class="id">8252369</td>
+                        <td class="gender">נקבה</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל"א</td>
+                        
+                    </tr> 
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_8947.JPG"></td>
+                        <td class="firstName">טל</td>
+                        <td class="lastName">כהן</td>
+                        <td class="id">3699511</td>
+                        <td class="gender">נקבה</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל'</td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_8937.JPG"></td>
+                        <td class="firstName">איתי</td>
+                        <td class="lastName">כספי</td>
+                        <td class="id">8352664</td>
+                        <td class="gender">זכר</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל"ג</td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_8948.JPG"></td>
+                        <td class="firstName">נועה</td>
+                        <td class="lastName">שמואלי</td>
+                        <td class="id">8144703</td>
+                        <td class="gender">נקבה</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל"ב</td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_8950.JPG"></td>
+                        <td class="firstName">יאנה</td>
+                        <td class="lastName">וולדובסקי</td>
+                        <td class="id">8522049</td>
+                        <td class="gender">נקבה</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל"א</td>
+                        
+                    </tr>
+                   
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_8954.JPG"></td>
+                        <td class="firstName">אוהד</td>
+                        <td class="lastName">אלבי</td>
+                        <td class="id">8659520</td>
+                        <td class="gender">זכר</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל'</td>
+                        
+                    </tr>
+                     <tr>
+                        <td class="pic"><img src="pics/TIL_9244.JPG"</td>
+                        <td class="firstName">רעות</td>
+                        <td class="lastName">גורשניטוביץ</td>
+                        <td class="id">4514412</td>
+                        <td class="gender">נקבה</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל"ב</td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_8918.JPG"></td>
+                        <td class="firstName">ירון</td>
+                        <td class="lastName">מלול</td>
+                        <td class="id">8452014</td>
+                        <td class="gender">זכר</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל"א</td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_8955.JPG"></td>
+                        <td class="firstName">טל</td>
+                        <td class="lastName">אליכין</td>
+                        <td class="id">8357889</td>
+                        <td class="gender">נקבה</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל"ג</td>
+                        
+                    </tr>
+                     
+
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_9257.JPG"></td>
+                        <td class="firstName">טל</td>
+                        <td class="lastName">רחמים</td>
+                        <td class="id">8470206</td>
+                        <td class="gender">נקבה</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל'</td>
+                        
+                    </tr> 
+                     <tr>
+                        <td class="pic"><img src="pics/TIL_9258.JPG"></td>
+                        <td class="firstName">עמרי</td>
+                        <td class="lastName">שלו</td>
+                        <td class="id">6933245</td>
+                        <td class="gender">זכר</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל"א</td>
+                        
+                    </tr> 
+                     <tr>
+                        <td class="pic"><img src="pics/TIL_9243.JPG"></td>
+                        <td class="firstName">רועי</td>
+                        <td class="lastName">אברהמי</td>
+                        <td class="id">8100472</td>
+                        <td class="gender">זכר</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל"ג</td>
+                        
+                    </tr> 
+                    <tr>
+                        <td class="pic"><img src="pics/TIL_9250.JPG"></td>
+                        <td class="firstName">יעל</td>
+                        <td class="lastName">צירלר</td>
+                        <td class="id">851479</td>
+                        <td class="gender">נקבה</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל"ג</td>
+                        
+                    </tr>
+                    
+                     
+                     <tr>
+                        <td class="pic"><img src="pics/TIL_9249.JPG"></td>
+                        <td class="firstName">כרמל</td>
+                        <td class="lastName">בראון</td>
+                        <td class="id">1004724</td>
+                        <td class="gender">נקבה</td>
+                        <td class="battalion">אריות</td>
+                        <td class="class">ל"ג</td>
+                        
+                    </tr> 
+                     
+                      
+                    
+
+                </tbody>
+        </table>
+    </div>
+   
+        
+    
+    </body>
+</html>
