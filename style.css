@@ -5,6 +5,7 @@ td{
     font-size: 20px;
     text-align: center;
 }
+
 thead th{
     font-size: 20px;
     text-align: center;
@@ -15,7 +16,7 @@ thead th{
 }
 
 .textSord{
-    position: absolute;
+    position: fixed;
     top: 2%;
     right:15%;
     text-align: left;
@@ -26,4 +27,5 @@ h1{
 select{
     position: absolute;
     left:93%;
+ 
 }
