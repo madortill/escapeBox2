@@ -16,7 +16,7 @@ thead th{
 }
 
 .textSord{
-    position: fixed;
+    position: absolute;
     top: 2%;
     right:15%;
     text-align: left;
